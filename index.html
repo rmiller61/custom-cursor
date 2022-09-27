@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <div id="cursor--wrapper" class="cursor--wrapper">
+      <div class="cursor--body">
+        <h1>Hello</h1>
+      </div>
+      <div id="cursor" class="cursor cursor--small">
+        <div class="cursor--circle cursor--follow"></div>
+        <svg
+          viewBox="0 0 81 81"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          class="cursor--icon"
+        >
+          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g transform="translate(3.000000, 3.000000)">
+              <path
+                d="M57.8,35.5 C58.4,35.7 58.6,36.3 58.4,36.9 C58.3,37.2 58.1,37.4 57.8,37.5 L27.5,55 C26.5,55.6 25.8,55.1 25.8,54 L25.8,19 C25.8,17.9 26.6,17.5 27.5,18 L57.8,35.5 Z"
+                fill-rule="nonzero"
+                class="svg--button__triangle"
+              ></path>
+            </g>
+          </g>
+        </svg>
+        <div class="pulse cursor--follow"></div>
+      </div>
+      <video
+        class="cursor--video"
+        id="cursor--video"
+        autoplay
+        loop
+        muted
+        playsinline
+        poster="https://ananycdev.wpengine.com/wp-content/uploads/revslider/video-media/ALT-Mountain-Sequence_19_layer-scaled.jpeg"
+      >
+        <source
+          src="https://ananycdev.wpengine.com/wp-content/uploads/2022/09/ALT-Mountain-Sequence.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
