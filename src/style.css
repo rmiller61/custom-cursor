@@ -7,10 +7,21 @@
   --color-link: #82ff73;
   cursor: none;
   overflow: hidden;
+  padding: max(10vw, 100px) 0px;
+}
+
+.cursor--wrapper:after {
+  background-color: rgba(0, 0, 0, 0.25);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  content: '';
 }
 
 .cursor--body {
-  position: absolute;
+  position: relative;
   left: 0;
   top: 0;
   height: 100%;
@@ -21,6 +32,8 @@
   align-items: center;
   z-index: 12000;
   color: var(--color-text);
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .cursor--video {
@@ -33,16 +46,18 @@
 }
 
 .cursor {
-  position: fixed;
+  /**position: fixed;**/
+  position: absolute;
   left: 0;
   top: 0;
   pointer-events: none;
+  opacity: 0;
 }
 .cursor--small {
-  width: 70px;
-  height: 70px;
-  left: -35px;
-  top: -35px;
+  width: 100px;
+  height: 100px;
+  left: 0px;
+  top: 0px;
   z-index: 11000;
   padding: 10px;
 }
