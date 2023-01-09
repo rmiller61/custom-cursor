@@ -9,7 +9,7 @@ const wrapper = document.getElementById('cursor--wrapper');
 const video = document.getElementById('cursor--video') as HTMLVideoElement;
 //const cursor = document.getElementById('cursor');
 
-let isPlaying = true;
+let isPlaying = false;
 let isTouch = false;
 
 window.addEventListener(
@@ -37,6 +37,7 @@ const initCursor = () => {
       }
     });
     wrapper.addEventListener('click', () => {
+      console.log(isPlaying);
       if (isPlaying) {
         video.pause();
         isPlaying = false;
@@ -44,12 +45,12 @@ const initCursor = () => {
           ease: 'linear',
           opacity: 1,
         });
-        gsap.to('.pause', {
+        gsap.to('.play', {
           ease: 'linear',
           opacity: 1,
           delay: 0.4,
         });
-        gsap.to('.play', {
+        gsap.to('.pause', {
           ease: 'linear',
           opacity: 0,
         });
@@ -60,11 +61,11 @@ const initCursor = () => {
           ease: 'linear',
           opacity: 0,
         });
-        gsap.to('.pause', {
+        gsap.to('.play', {
           ease: 'linear',
           opacity: 0,
         });
-        gsap.to('.play', {
+        gsap.to('.pause', {
           ease: 'linear',
           opacity: 1,
           delay: 0.4,
