@@ -40,9 +40,35 @@ const initCursor = () => {
       if (isPlaying) {
         video.pause();
         isPlaying = false;
+        gsap.to('.cursor--body', {
+          ease: 'linear',
+          opacity: 1,
+        });
+        gsap.to('.pause', {
+          ease: 'linear',
+          opacity: 1,
+          delay: 0.4,
+        });
+        gsap.to('.play', {
+          ease: 'linear',
+          opacity: 0,
+        });
       } else {
         video.play();
         isPlaying = true;
+        gsap.to('.cursor--body', {
+          ease: 'linear',
+          opacity: 0,
+        });
+        gsap.to('.pause', {
+          ease: 'linear',
+          opacity: 0,
+        });
+        gsap.to('.play', {
+          ease: 'linear',
+          opacity: 1,
+          delay: 0.4,
+        });
       }
     });
   }
